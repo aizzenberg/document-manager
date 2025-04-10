@@ -34,11 +34,8 @@ Before you begin, ensure you have the following installed on your system:
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
-    cd <project_directory>
+    git clone https://github.com/aizzenberg/document-manager.git
     ```
-
-    Replace `<repository_url>` with the actual URL of your project repository and `<project_directory>` with the name of the cloned directory.
 
 2.  **Install dependencies:**
 
