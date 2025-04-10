@@ -1,0 +1,13 @@
+<div class="header">
+  <button mat-flat-button (click)="handleDocumentAction({ type: 'ADD' })">
+    Add Document
+  </button>
+</div>
+
+<div class="body">
+  <app-document-list
+    [listConfig]="listConfig()"
+    (actionTriggered)="handleDocumentAction($event)"
+    [(pagination)]="paginationConfig"
+  ></app-document-list>
+</div>

@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Confirmation</h2>
+<mat-dialog-content>
+  <p>{{ data.message }}</p>
+</mat-dialog-content>
+<mat-progress-bar *ngIf="isLoading()" mode="indeterminate"></mat-progress-bar>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="false" [disabled]="isLoading()">
+    Cancel
+  </button>
+  <button mat-flat-button (click)="emitData(true)" [disabled]="isLoading()">
+    <span>Confirm</span>
+  </button>
+</mat-dialog-actions>

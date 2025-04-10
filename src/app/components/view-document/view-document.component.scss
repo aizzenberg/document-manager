@@ -1,0 +1,19 @@
+.error-message {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--mat-sys-outline-variant);
+
+  h2 {
+    font-size: 3em;
+  }
+
+  .mat-icon {
+    $icon-size: 25vh;
+    font-size: $icon-size;
+    width: $icon-size;
+    height: $icon-size;
+  }
+}

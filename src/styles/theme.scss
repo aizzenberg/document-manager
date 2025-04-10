@@ -1,0 +1,74 @@
+@use "@angular/material" as mat;
+
+.error {
+  @include mat.button-overrides(
+    (
+      filled-container-color: var(--mat-sys-error),
+      filled-label-text-color: var(--mat-sys-on-error),
+      filled-state-layer-color: var(--mat-sys-on-error),
+      filled-ripple-color: var(--mat-sys-on-error-container),
+      protected-label-text-color: var(--mat-sys-error),
+      protected-state-layer-color: var(--mat-sys-error),
+      protected-ripple-color: var(--mat-sys-on-error),
+    )
+  );
+  @include mat.fab-overrides(
+    (
+      container-color: var(--mat-sys-error),
+      foreground-color: var(--mat-sys-on-error),
+      ripple-color: var(--mat-sys-on-error-container),
+      small-container-color: var(--mat-sys-error),
+      small-foreground-color: var(--mat-sys-on-error),
+      small-ripple-color: var(--mat-sys-on-error-container),
+    )
+  );
+  @include mat.icon-button-overrides(
+    (
+      icon-color: var(--mat-sys-on-error),
+      ripple-color: var(--mat-sys-error),
+      state-layer-color: var(--mat-sys-error),
+    )
+  );
+}
+
+.primary {
+  color: var(--mat-sys-primary);
+  @include mat.icon-button-overrides(
+    (
+      icon-color: var(--mat-sys-primary),
+      ripple-color: var(--mat-sys-on-primary),
+      state-layer-color: var(--mat-sys-primary),
+    )
+  );
+}
+
+.warn {
+  @include mat.button-overrides(
+    (
+      filled-container-color: var(--mat-sys-tertiary),
+      filled-label-text-color: var(--mat-sys-on-tertiary),
+      filled-state-layer-color: var(--mat-sys-on-tertiary),
+      filled-ripple-color: var(--mat-sys-on-tertiary-container),
+      protected-label-text-color: var(--mat-sys-tertiary),
+      protected-state-layer-color: var(--mat-sys-tertiary),
+      protected-ripple-color: var(--mat-sys-on-tertiary),
+    )
+  );
+  @include mat.fab-overrides(
+    (
+      container-color: var(--mat-sys-tertiary),
+      foreground-color: var(--mat-sys-on-tertiary),
+      ripple-color: var(--mat-sys-on-tertiary-container),
+      small-container-color: var(--mat-sys-tertiary),
+      small-foreground-color: var(--mat-sys-on-tertiary),
+      small-ripple-color: var(--mat-sys-on-tertiary-container),
+    )
+  );
+  @include mat.icon-button-overrides(
+    (
+      icon-color: var(--mat-sys-tertiary),
+      ripple-color: var(--mat-sys-on-tertiary),
+      state-layer-color: var(--mat-sys-tertiary),
+    )
+  );
+}

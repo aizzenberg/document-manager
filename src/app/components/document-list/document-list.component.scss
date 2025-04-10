@@ -1,0 +1,17 @@
+.mat-mdc-card {
+  height: 80vh;
+  .filters {
+    gap: 16px;
+    padding-left: 0;
+  }
+  .mat-mdc-card-content {
+    height: 100%;
+    overflow: auto;
+
+    .empty-data {
+      color: var(--mat-sys-on-surface);
+      height: 50vh;
+      text-align: center;
+    }
+  }
+}

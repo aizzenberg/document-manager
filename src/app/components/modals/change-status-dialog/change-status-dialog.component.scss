@@ -1,0 +1,13 @@
+.info {
+  margin-bottom: 15px;
+  padding: 0 16px;
+
+  code {
+    color: var(--mat-sys-outline);
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}

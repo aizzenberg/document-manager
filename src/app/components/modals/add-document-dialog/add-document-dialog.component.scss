@@ -1,0 +1,23 @@
+.form-container {
+  & > * {
+    margin-bottom: 16px;
+  }
+
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+
+  .file-input {
+    & > #file-name {
+      margin-left: 16px;
+      color: var(--mat-sys-on-surface);
+      code {
+        color: var(--mat-sys-outline);
+      }
+    }
+    .mat-mdc-form-field-error {
+      padding: 0 16px;
+      font-size: var(--mat-sys-body-small-size);
+    }
+  }
+}

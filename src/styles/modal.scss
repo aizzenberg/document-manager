@@ -1,0 +1,15 @@
+.modal {
+  .mdc-dialog {
+    width: 600px;
+    padding: 20px;
+
+    .mat-mdc-dialog-title {
+      text-align: center;
+      color: var(--mat-sys-on-surface);
+    }
+
+    .mat-mdc-dialog-title + .mat-mdc-dialog-content {
+      padding: 20px 24px;
+    }
+  }
+}

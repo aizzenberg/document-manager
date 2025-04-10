@@ -2,58 +2,48 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.2.
 
-## Development server
+## Introduction
 
-To start a local development server, run:
+I would like to thank you for this interesting test assignment. I found the proposed task very interesting, especially the degree of freedom that was provided.
 
-```bash
-ng serve
-```
+Throughout the development process, I adhered to the widely accepted principles of “clean code” and aimed to create a highly understandable and easily scalable solution that is also easy to maintain. My goal was not just to meet all the formal requirements but also to showcase my approach to design and development.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+I approached this application as if it were a real-world project with the potential for future growth. Therefore, I made several decisions to enhance scalability (though I understand this might seem like premature optimization in the context of a test assignment).
 
-## Code scaffolding
+My approach to solving the problem was as follows:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1.  **Separation of role-specific functionality into distinct components.** I opted for a single, shared presentation component (`DocumentListComponent`) used by two container components (`UserDashboardComponent` and `ReviewerDashboardComponent`), each determining the available functionality based on the user's role.
+2.  **Utilizing inheritance to abstract common logic into base abstract classes** (`BaseDialogComponent`, `BaseDashboardComponent`).
+3.  **Aiming to separate the management of asynchronous flows by using both Signal and Observable APIs.** I primarily used Observables for lower-level logic (such as in services) and implemented Signals as a facade for the components to simplify state management.
+4.  **Choosing to implement the “Command” pattern for handling document actions**, encapsulating the logic of each individual action within its own class that implements a common interface (`DocumentCommand`).
 
-```bash
-ng generate component component-name
-```
+## Project Setup and Instructions
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+This section provides instructions on how to set up and run the project locally.
 
-```bash
-ng generate --help
-```
+### Prerequisites
 
-## Building
+Before you begin, ensure you have the following installed on your system:
 
-To build the project run:
+- [Node.js](https://nodejs.org/) (version = ^18.19.1 || ^20.11.1 || ^22.0.0)
+- [npm](https://www.npmjs.com/) (version = ^8.0.0 || ^10.0.0) 
+- [Git](https://git-scm.com/) (for cloning the repository)
 
-```bash
-ng build
-```
+### Installation
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1.  **Clone the repository:**
 
-## Running unit tests
+    ```bash
+    git clone <repository_url>
+    cd <project_directory>
+    ```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+    Replace `<repository_url>` with the actual URL of your project repository and `<project_directory>` with the name of the cloned directory.
 
-```bash
-ng test
-```
+2.  **Install dependencies:**
 
-## Running end-to-end tests
+    Using npm:
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    ```bash
+    npm install
+    ```

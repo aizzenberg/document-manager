@@ -1,0 +1,7 @@
+<div class="body">
+  <app-document-list
+    [listConfig]="listConfig()"
+    (actionTriggered)="handleDocumentAction($event)"
+    [(pagination)]="paginationConfig"
+  ></app-document-list>
+</div>

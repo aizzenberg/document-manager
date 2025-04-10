@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  .body {
+    flex-grow: 1;
+    padding: 0 16px;
+  }
+}
